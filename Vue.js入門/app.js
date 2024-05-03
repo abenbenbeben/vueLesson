@@ -29,6 +29,14 @@ var vm = new Vue({
       return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     },
   },
+  methods: {
+    doBuy: function () {
+      alert(this.totalPriceWithTax + "円のお買い上げ！");
+      this.items.forEach(function (item) {
+        item.quantity = 0;
+      });
+    },
+  },
   computed: {
     //算出プロパティ
     totalPrice: function () {
