@@ -1,20 +1,25 @@
-.v-enter-active,
-.v-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 500ms ease-out;
 }
-
-.v-enter {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
-
-.v-enter-to {
+.fade-leave,
+.fade-enter-to {
   opacity: 1;
 }
 
-.v-leave {
-  opacity: 1;
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 500ms ease-out;
 }
-
-.v-leave-to {
-  opacity: 0;
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
+}
+.slide-leave,
+.slide-enter-to {
+  transform: translateX(0);
 }

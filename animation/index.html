@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<title>Vue app animation</title>
-<link rel="stylesheet" href="style.css" />
-<script src="https://unpkg.com/vue@2.5.17"></script>
-
-<div id="app">
-  <button @click="isShown = !isShown">表示の切り替え</button>
-  <transition>
-    <p v-show="isShown">Hello world!</p>
-  </transition>
-</div>
-<script src="./app.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue app animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@2.5.17"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="isShown = !isShown">表示の切り替え</button>
+      <button @click="isNewShown = !isNewShown">
+        新しい要素の表示切り替え
+      </button>
+      <transition name="fade">
+        <p v-show="isShown">Hello world!</p>
+      </transition>
+      <transition name="slide">
+        <p v-show="isNewShown">New Element</p>
+      </transition>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

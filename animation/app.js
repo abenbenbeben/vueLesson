@@ -3,6 +3,7 @@ new Vue({
   data: function () {
     return {
       isShown: false,
+      isNewShown: false,
     };
   },
 });
